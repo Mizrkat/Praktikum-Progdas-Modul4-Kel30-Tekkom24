@@ -29,6 +29,7 @@ def hasil(Masukan):
 
 Masukan = int(input("Silahkan dipesan ya! (1-4): "))
 hasil(Masukan)
+
 def Jumlah(Masukan2):
     while Masukan2 <= 0:
         Masukan2 = int(input("Input anda tidak boleh nol atau minus: "))
@@ -39,4 +40,3 @@ def Jumlah(Masukan2):
 
 Masukan2 = int(input("Anda mau pesan berapa? (Minimal 1): "))
 Jumlah(Masukan2)
-
