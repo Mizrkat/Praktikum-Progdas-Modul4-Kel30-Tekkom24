@@ -29,3 +29,14 @@ def hasil(Masukan):
 
 Masukan = int(input("Silahkan dipesan ya! (1-4): "))
 hasil(Masukan)
+def Jumlah(Masukan2):
+    while Masukan2 <= 0:
+        Masukan2 = int(input("Input anda tidak boleh nol atau minus: "))
+    
+    Total_Bayar = Masukan2 * Penyimpanan[Hitung]
+    Perlu_bayar.append(Total_Bayar)
+    print("Oke, karena anda mau pesan", Masukan2, ", jadi totalnya", Total_Bayar, "\n")
+
+Masukan2 = int(input("Anda mau pesan berapa? (Minimal 1): "))
+Jumlah(Masukan2)
+
