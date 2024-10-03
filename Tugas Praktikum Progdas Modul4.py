@@ -62,6 +62,25 @@ def Pesanan_Tambahan(Masukan3):
     elif Masukan3 == "no":
         pass
     else:
+        def Pembayaran(Masukan4):
+    while Masukan4 >= 4 or Masukan4 <= 0:
+        Masukan4 = int(input("Input anda salah, pilih antara (1-3) ya!: "))
+    
+    Biaya, Metode = Tambahan_biaya[Masukan4]
+
+    if Masukan4 == 1:
+        print("karena anda memilih", Metode, ", tidak ada biaya tambahan")
+        return sum(Perlu_bayar)
+    else:
+        print("karena anda memilih", Metode, ", biaya tambahannya adalah {}\n".format(Biaya))
+        return sum(Perlu_bayar) + Biaya
+
+Percobaan.Metode_Pembayaran()
+Masukan4 = int(input("Silahkan dipilih ya! (1-3): "))
+Keseluruhan = Pembayaran(Masukan4)
+
+print("Keseluruhan biaya anda adalah", Keseluruhan)
+print("Terima kasih telah memesan!")
         Masukan3 = str(input("Mohon hanya masukan input (yes/no): "))
         Pesanan_Tambahan(Masukan3)
 
