@@ -40,3 +40,30 @@ def Jumlah(Masukan2):
 
 Masukan2 = int(input("Anda mau pesan berapa? (Minimal 1): "))
 Jumlah(Masukan2)
+
+def Pesanan_Tambahan(Masukan3):
+    global Hitung
+
+    if Masukan3 == "yes":
+        while Hitung <= 5:
+            Hitung += 1
+
+            Percobaan.Menu_Makanan()
+            
+            Masukan = int(input("Silahkan dipesan ya! (1-4): "))
+            hasil(Masukan)
+            
+            Masukan2 = int(input("Anda mau pesan berapa? (Minimal 1): "))
+            Jumlah(Masukan2)
+
+            Masukan3 = str(input("Apakah ada tambahan lagi? (yes/no): "))
+            if Masukan3 != "yes":
+                break
+    elif Masukan3 == "no":
+        pass
+    else:
+        Masukan3 = str(input("Mohon hanya masukan input (yes/no): "))
+        Pesanan_Tambahan(Masukan3)
+
+Masukan3 = str(input("Apakah ada tambahan lagi? (yes/no): "))
+Pesanan_Tambahan(Masukan3)
